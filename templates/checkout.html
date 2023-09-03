@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout page</title>
+</head>
+<body>
+    <h1>Checkout for product: {{product.name}}</h1>
+    <div class="product-container">
+        <div class="products">
+            <img class="img" src="{{product.image}}" alt="">
+            <p>{{product.name}}</p>
+            <p>Price: $ {{product.price}}</p>
+            <p>Description: {{product.description}}</p>
+            <!-- <button>Purchase</button> -->
+            {{paypal.render}}
+        </div>  
+    </div>
+    <style>
+        body {
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .product-container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 100vh;
+        }
+        .img {
+            width: 60%;
+            border-radius: 50px;
+        }
+        button {
+            padding: 10px;
+            border-radius: 5px;
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+        }
+    </style>
+</body>
+</html>
